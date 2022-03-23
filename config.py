@@ -1,4 +1,3 @@
-from tracemalloc import Filter
 from src.algorithms.grayscale import avg_grayscale, luma_grayscale, desaturate, max_decomposition, min_decomposition, red_reduction, green_reduction, blue_reduction
 
 from src.consts.consts import Filters
