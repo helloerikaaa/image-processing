@@ -44,3 +44,67 @@ def desaturate(image):
                                 min(red, green, blue)) / 2
 
     return gray_image
+
+
+def max_decomposition(image):
+    height, width = ImageUtils().get_image_dimensions(image)
+    gray_image = np.empty(shape=(height, width))
+    for i in range(height):
+        for j in range(width):
+            red = int(image[i][j][0])
+            green = int(image[i][j][1])
+            blue = int(image[i][j][2])
+
+            gray_image[i][j] = max(red, green, blue)
+
+    return gray_image
+
+
+def min_decomposition(image):
+    height, width = ImageUtils().get_image_dimensions(image)
+    gray_image = np.empty(shape=(height, width))
+    for i in range(height):
+        for j in range(width):
+            red = int(image[i][j][0])
+            green = int(image[i][j][1])
+            blue = int(image[i][j][2])
+
+            gray_image[i][j] = min(red, green, blue)
+
+    return gray_image
+
+
+def red_reduction(image):
+    height, width = ImageUtils().get_image_dimensions(image)
+    gray_image = np.empty(shape=(height, width))
+    for i in range(height):
+        for j in range(width):
+            red = int(image[i][j][0])
+
+            gray_image[i][j] = red
+
+    return gray_image
+
+
+def green_reduction(image):
+    height, width = ImageUtils().get_image_dimensions(image)
+    gray_image = np.empty(shape=(height, width))
+    for i in range(height):
+        for j in range(width):
+            green = int(image[i][j][1])
+
+            gray_image[i][j] = green
+
+    return gray_image
+
+
+def blue_reduction(image):
+    height, width = ImageUtils().get_image_dimensions(image)
+    gray_image = np.empty(shape=(height, width))
+    for i in range(height):
+        for j in range(width):
+            blue = int(image[i][j][2])
+
+            gray_image[i][j] = blue
+
+    return gray_image
