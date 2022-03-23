@@ -1,4 +1,5 @@
 from src.algorithms.grayscale import avg_grayscale, luma_grayscale, desaturate, max_decomposition, min_decomposition, red_reduction, green_reduction, blue_reduction
+from src.algorithms.histogram import get_histogram
 
 from src.consts.consts import Filters
 
@@ -11,4 +12,5 @@ FILTERS = {
     Filters.RED_REDUCTION: red_reduction,
     Filters.GREEN_REDUCTION: green_reduction,
     Filters.BLUE_REDUCTION: blue_reduction,
+    Filters.GRAY_HISTOGRAM: get_histogram
 }

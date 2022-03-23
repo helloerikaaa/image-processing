@@ -19,3 +19,4 @@ class Filters(EnumConstant):
     RED_REDUCTION = 'red_reduction'
     GREEN_REDUCTION = 'green_reduction'
     BLUE_REDUCTION = 'blue_reduction'
+    GRAY_HISTOGRAM = 'get_histogram'

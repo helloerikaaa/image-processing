@@ -12,7 +12,7 @@ class ImageUtils:
         image.save(filename)
 
     def get_image_dimensions(self, image):
-        height, width, _ = image.shape
+        height, width = image.shape[0], image.shape[1]
         return height, width
 
     def array_to_image(self, array):

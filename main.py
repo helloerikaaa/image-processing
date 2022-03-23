@@ -11,6 +11,7 @@ def main(args):
     image = ImageUtils().open_image(os.path.join(
         Paths.original_imgs_path, args.image_name))
     generated_image = config.FILTERS[args.filter](image)
+    generated_image = ImageUtils().array_to_image(generated_image)
 
     if args.save:
         print('Saving image...')
@@ -20,7 +21,6 @@ def main(args):
             Paths.generated_imgs_path, file_name))
     else:
         print('Showing image...')
-        generated_image = ImageUtils().array_to_image(generated_image)
         generated_image.show()
 
 
