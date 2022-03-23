@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pillow = "*"
 numpy = "*"
+matplotlib = "*"
+tqdm = "*"
 
 [dev-packages]
 autopep8 = "*"
